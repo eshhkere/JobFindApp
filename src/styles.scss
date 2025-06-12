@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
-  background-color: #17212b;
+  background-color: rgba(25, 26, 31, 1);
   font-family: 'Inter', sans-serif;
 }
 

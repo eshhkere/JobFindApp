@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthorizationComponent } from './components/authorization/authorization.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { VacanciesComponent } from './components/vacancies/vacancies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthorizationComponent,
     ProfileComponent,
+    VacanciesComponent,
   ],
   imports: [
     BrowserModule,
