@@ -1,0 +1,47 @@
+<div class="auth-container">
+    <div class="characters-row">
+        <div class="character-card" 
+             [class.active]="selectedRole === 'employer'"
+             [class.inactive]="selectedRole === 'finder'"
+             (click)="selectRoleByImage('employer')">
+            <img src="assets/images/employer.png" alt="Работодатель">
+            <div class="role-label" *ngIf="selectedRole === 'employer'">
+                Я работодатель
+            </div>
+        </div>
+        
+        <div class="character-card" 
+             [class.active]="selectedRole === 'finder'"
+             [class.inactive]="selectedRole === 'employer'"
+             (click)="selectRoleByImage('finder')">
+            <img src="assets/images/finder.png" alt="Соискатель">
+            <div class="role-label" *ngIf="selectedRole === 'finder'">
+                Я соискатель
+            </div>
+        </div>
+    </div>
+
+    <h2>Авторизация</h2>
+
+    <form (ngSubmit) = "submitForm()">
+        <div class="form-group">
+            <label for="userName">Имя</label>
+            <input type="text" id="userName" name="userName" [(ngModel)]="userName" placeholder="Введите своё имя">
+        </div>
+
+        <div class="form-group">
+            <label for="userRole">Роль в сервисе</label>
+            <div class="select-wrapper">
+                <select name="userRole" id="userRole" [(ngModel)]="selectedRole" (change)="onRoleDropdownChange($event)">
+                    <option value="" disabled selected>Выберите роль</option>  
+                    <option value="employer">Я работодатель</option> 
+                    <option value="finder">Я соискатель</option>       
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-authorize" [disabled]="!isFormValid()">
+            Авторизоваться
+        </button>
+    </form>
+</div>
