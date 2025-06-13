@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AuthorizationComponent } from './components/authorization/authorization.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { VacanciesComponent } from './components/vacancies/vacancies.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { VacanciesComponent } from './components/vacancies/vacancies.component';
     AuthorizationComponent,
     ProfileComponent,
     VacanciesComponent,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
