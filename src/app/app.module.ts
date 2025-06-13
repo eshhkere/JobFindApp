@@ -8,6 +8,7 @@ import { AuthorizationComponent } from './components/authorization/authorization
 import { ProfileComponent } from './components/profile/profile.component';
 import { VacanciesComponent } from './components/vacancies/vacancies.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { VacancyDetailsComponent } from './components/vacancy-details/vacancy-details.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     ProfileComponent,
     VacanciesComponent,
     NavigationComponent,
+    VacancyDetailsComponent,
   ],
   imports: [
     BrowserModule,
