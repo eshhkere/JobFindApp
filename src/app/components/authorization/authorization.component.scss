@@ -3,15 +3,13 @@
 // основной контейнер
 .auth-container {
   color: white;
-  padding: 20px;
-  max-width: 100%;
+  padding-top: 40px;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: 'Inter', sans-serif;
-  width: 100%;
-  max-width: 375px;
   margin: 0 auto;
   box-sizing: border-box;
 }

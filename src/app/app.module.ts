@@ -9,6 +9,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { VacanciesComponent } from './components/vacancies/vacancies.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { VacancyDetailsComponent } from './components/vacancy-details/vacancy-details.component';
+import { FilterVacanciesComponent } from './components/filter-vacancies/filter-vacancies.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { VacancyDetailsComponent } from './components/vacancy-details/vacancy-de
     VacanciesComponent,
     NavigationComponent,
     VacancyDetailsComponent,
+    FilterVacanciesComponent,
+    FavoritesComponent,
   ],
   imports: [
     BrowserModule,
