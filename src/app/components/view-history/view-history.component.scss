@@ -1,20 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
-.favorites-container {
+.history-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin: 0 auto;
-
-    h1 {
-        color: rgba(255, 255, 255, 1);
+  }
+  
+  h1 {
+    color: rgba(255, 255, 255, 1);
         font-family: 'Inter', sans-serif;
         font-size: 1.5rem;
         font-weight: 600;
         margin: 20px 0 20px 0;
-    }
-}
+  }
+  
+  .empty-history {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 18px;
+    color: #888;
+  }
 
 .vacancy-container {
     display: flex;
@@ -52,6 +59,11 @@
                 margin: 10px 10px 0 0;
                 flex-shrink: 0;
                 
+            }
+
+            svg.favorited path {
+                fill: #FF2A69;
+                stroke: #FF2A69;
             }
         }
     }
@@ -168,13 +180,4 @@
             background: #7d5fff; 
         }
     }
-}
-
-.empty-favorites {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    font-weight: normal;
-    text-align: center;
-    padding: 50px 0;
-    color: #888;
 }

@@ -11,6 +11,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { VacancyDetailsComponent } from './components/vacancy-details/vacancy-details.component';
 import { FilterVacanciesComponent } from './components/filter-vacancies/filter-vacancies.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
+import { DurationPipe } from './pipes/duration.pipe';
+import { ViewHistoryComponent } from './components/view-history/view-history.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
     VacancyDetailsComponent,
     FilterVacanciesComponent,
     FavoritesComponent,
+    DurationPipe,
+    ViewHistoryComponent,
   ],
   imports: [
     BrowserModule,
