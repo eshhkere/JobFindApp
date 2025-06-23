@@ -1,26 +1,171 @@
-.profile-selection-container {
-    max-width: 480px;
-    height: 100vh;
-    margin: 0 auto;
-    padding: 20px;
-    color: #E0E0E0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    
-    h2 {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 30px;
-    }
+// .profile-selection-container {
+//   max-width: 480px;
+//   height: 100vh;
+//   margin: 0 auto;
+//   padding: 20px;
+//   color: #e0e0e0;
+//   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+//     Ubuntu, sans-serif;
 
-    .user-role {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
+//   h2 {
+//     text-align: center;
+//     font-size: 24px;
+//     margin-bottom: 30px;
+//   }
 
-    .user-name {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
+//   .user-role {
+//     display: flex;
+//     align-items: center;
+//     gap: 10px;
+//   }
+
+//   .user-name {
+//     display: flex;
+//     align-items: center;
+//     gap: 10px;
+//   }
+// }
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+.profile-container {
+  // background-color: #121212;
+  color: white;
+  padding: 20px;
+  max-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.profile-title {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.profile_pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+.profile_name {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+  margin-bottom: 24px;
+  margin-left: 120px;
+  margin-top: -40px;
+}
+.contacts-section {
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 320px;
+  height: 151px;
+  margin-bottom: 20px;
+  background-color: rgba(53, 56, 63, 1);
+}
+
+.contacts-title {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-left: 10px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.phone-number {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-left: 10px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.phone-label,
+.user-label {
+  color: #666666;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.username {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.add-resume-button {
+  width: 320px;
+  padding: 12px 0;
+  background: rgba(104, 73, 255, 1);
+
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+
+  margin-bottom: 360px;
+}
+
+.add-resume-button:hover {
+  background: rgb(63, 43, 162);
+}
+.button-text {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-top: 10px;
+}
+.plus {
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+.bottom_menu {
+  width: 320px;
+  height: 60px;
+  color: rgba(25, 26, 31, 1);
+  border: 1px solid white;
+  border-radius: 30px;
+}
+.icons {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 16px;
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+  margin-left: 20px;
+  margin-top: 10px;
 }

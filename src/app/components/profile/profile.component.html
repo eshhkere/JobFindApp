@@ -1,11 +1,52 @@
-<div class="profile-selection-container">
-    <h2>Профиль</h2>
-    <div class="user-role">
+<!-- <div class="profile-selection-container">
+  <h2>Профиль</h2>
+  <div class="user-role">
     <p>Роль:</p>
-    <div class="role-value">{{ userRole === 'finder' ? 'Соискатель' : 'Работодатель' }}</div>
+    <div class="role-value">
+      {{ userRole === "finder" ? "Соискатель" : "Работодатель" }}
     </div>
-    <div class="user-name">
+  </div>
+  <div class="user-name">
     <p>Имя:</p>
     <div class="name-value">{{ userName }}</div>
+  </div>
+</div> -->
+
+<div class="profile-container">
+  <h1 class="profile-title">Профиль</h1>
+  <img src="assets/images/profile_pic.png" alt="123" class="profile_pic" />
+  <div class="profile_name">
+    <div class="name-value">{{ userName }}</div>
+  </div>
+
+  <div class="contacts-section">
+    <h2 class="contacts-title">Контакты:</h2>
+    <div class="contact-item phone-number">+7 987 187 8633</div>
+    <div class="contact-item phone-label">Номер телефона</div>
+    <div class="contact-item username">@all_garbansahedov</div>
+    <div class="contact-item user-label">Имя пользователя</div>
+  </div>
+
+  <button routerLink="/resume" class="add-resume-button">
+    <!-- <img src="assets/images/basil_plus-outline.png" alt="" class="plus" /> -->
+    <span class="button-text">+ Добавить резюме</span>
+  </button>
+  <!-- <div class="bottom_menu">
+    <div class="bottom_container">
+      <ul class="icons">
+        <li class="icon">
+          <img src="assets/images/flowbite_briefcase.png" alt="" />
+        </li>
+        <li class="icon">
+          <img src="assets/images/iconamoon_heart-thin.png" alt="" />
+        </li>
+        <li class="icon">
+          <img src="assets/images/iconamoon_history-thin.png" alt="" />
+        </li>
+        <li class="icon">
+          <img src="assets/images/iconamoon_profile-thin.png" alt="" />
+        </li>
+      </ul>
     </div>
+  </div> -->
 </div>
