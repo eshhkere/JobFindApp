@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,8 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'zilant-job-app';
 
-  constructor(public router: Router) {}
+  constructor(
+    public userService: UserService,
+    public router: Router
+  ) {}
 }

@@ -7,6 +7,8 @@ import { VacancyDetailsComponent } from './components/vacancy-details/vacancy-de
 import { FilterVacanciesComponent } from './components/filter-vacancies/filter-vacancies.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { ViewHistoryComponent } from './components/view-history/view-history.component';
+import { AnnouncementsComponent } from './components/announcements/announcements.component';
+import { NewAnnouncementComponent } from './components/new-announcement/new-announcement.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/authorization', pathMatch: 'full' },
@@ -17,6 +19,9 @@ const routes: Routes = [
   {path: 'filter-vacancies', component: FilterVacanciesComponent},
   {path: 'favorites', component: FavoritesComponent},
   {path: 'view-history', component: ViewHistoryComponent},
+  {path: 'announcements', component: AnnouncementsComponent},
+  {path: 'new-announcement', component: NewAnnouncementComponent},
+  
 ];
 
 @NgModule({
