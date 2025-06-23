@@ -22,7 +22,8 @@ const routes: Routes = [
   { path: 'favorites', component: FavoritesComponent },
   { path: 'view-history', component: ViewHistoryComponent },
   { path: 'announcements', component: AnnouncementsComponent },
-  { path: 'new-announcement', component: NewAnnouncementComponent }
+  { path: 'new-announcement', component: NewAnnouncementComponent },
+  { path: 'resume', component: ResumeComponent }
 ];
 
 @NgModule({

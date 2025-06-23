@@ -16,6 +16,7 @@ import { DurationPipe } from './pipes/duration.pipe';
 import { ViewHistoryComponent } from './components/view-history/view-history.component';
 import { AnnouncementsComponent } from './components/announcements/announcements.component';
 import { NewAnnouncementComponent } from './components/new-announcement/new-announcement.component';
+import { ResumeComponent } from './components/resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NewAnnouncementComponent } from './components/new-announcement/new-anno
     ViewHistoryComponent,
     AnnouncementsComponent,
     NewAnnouncementComponent,
+    ResumeComponent,
   ],
   imports: [
     BrowserModule,
