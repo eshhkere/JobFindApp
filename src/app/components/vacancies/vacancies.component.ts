@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Vacancy } from '../../models/vacancy.model';
 import { VacancyService } from '../../services/vacancy.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-vacancies',
@@ -10,7 +11,10 @@ import { VacancyService } from '../../services/vacancy.service';
 export class VacanciesComponent implements OnInit {
   vacancies: Vacancy[] = [];
   
-  constructor(private vacancyService: VacancyService) { }
+  constructor(
+    private vacancyService: VacancyService,
+    private userService: UserService
+  ) { }
   
   ngOnInit(): void {
     // Получаем вакансии из сервиса
@@ -21,4 +25,9 @@ export class VacanciesComponent implements OnInit {
     // Используем сервис для переключения
     this.vacancyService.toggleFavorite(vacancy.job_id);
   }
+
+  isEmployer(): boolean {
+    return this.userService.getUserRole() === 'employer';
+  }
+
 }

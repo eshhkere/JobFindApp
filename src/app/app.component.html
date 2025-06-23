@@ -2,5 +2,6 @@
   <div class="content-container">
     <router-outlet></router-outlet>
   </div>
-  <app-navigation *ngIf="router.url !== '/authorization'"></app-navigation>
+  <app-finder-navigation *ngIf="userService.getUserRole() === 'finder' && router.url !== '/authorization'"></app-finder-navigation>
+  <app-employer-navigation *ngIf="userService.getUserRole() === 'employer' && router.url !== '/authorization'"></app-employer-navigation>
 </div>
