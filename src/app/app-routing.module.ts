@@ -10,6 +10,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
 import { ViewHistoryComponent } from './components/view-history/view-history.component';
 import { AnnouncementsComponent } from './components/announcements/announcements.component';
 import { NewAnnouncementComponent } from './components/new-announcement/new-announcement.component';
+import { EditingAnnouncementComponent } from './components/editing-announcement/editing-announcement.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/authorization', pathMatch: 'full' },
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'view-history', component: ViewHistoryComponent },
   { path: 'announcements', component: AnnouncementsComponent },
   { path: 'new-announcement', component: NewAnnouncementComponent },
-  { path: 'resume', component: ResumeComponent }
+  { path: 'resume', component: ResumeComponent },
+  { path: 'editing-announcement', component: EditingAnnouncementComponent },
 ];
 
 @NgModule({

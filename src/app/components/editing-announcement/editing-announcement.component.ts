@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-filter-vacancies',
-  templateUrl: './filter-vacancies.component.html',
-  styleUrls: ['./filter-vacancies.component.scss']
+  selector: 'app-editing-announcement',
+  templateUrl: './editing-announcement.component.html',
+  styleUrls: ['./editing-announcement.component.scss']
 })
-export class FilterVacanciesComponent {
+export class EditingAnnouncementComponent {
   isUrgent: boolean = false;
   
   toggleUrgent(event: Event): void {

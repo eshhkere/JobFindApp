@@ -17,6 +17,7 @@ import { ViewHistoryComponent } from './components/view-history/view-history.com
 import { AnnouncementsComponent } from './components/announcements/announcements.component';
 import { NewAnnouncementComponent } from './components/new-announcement/new-announcement.component';
 import { ResumeComponent } from './components/resume/resume.component';
+import { EditingAnnouncementComponent } from './components/editing-announcement/editing-announcement.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ResumeComponent } from './components/resume/resume.component';
     AnnouncementsComponent,
     NewAnnouncementComponent,
     ResumeComponent,
+    EditingAnnouncementComponent,
   ],
   imports: [
     BrowserModule,

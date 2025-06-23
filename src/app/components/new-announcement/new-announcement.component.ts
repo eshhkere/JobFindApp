@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./new-announcement.component.scss']
 })
 export class NewAnnouncementComponent {
-
+  isUrgent: boolean = false;
+  
+  toggleUrgent(event: Event): void {
+    const checkbox = event.target as HTMLInputElement;
+    this.isUrgent = checkbox.checked;
+    console.log('isUrgent:', this.isUrgent);
+  }
 }

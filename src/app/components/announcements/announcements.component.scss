@@ -106,6 +106,10 @@
                 flex-direction: column;
                 margin: 0 10px 0 22px;
                 gap: 10px;
+
+                .edit-button {
+                    cursor: pointer;
+                }
             }
         }
     }

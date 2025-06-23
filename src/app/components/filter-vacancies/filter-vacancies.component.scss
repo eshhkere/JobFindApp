@@ -141,6 +141,11 @@ h2 {
 
     svg {
         margin-left: 10px;
+        transition: opacity 0.3s ease;
+        
+        &.dimmed {
+            opacity: 0.3;
+        }
     }
 
     h2 {
