@@ -126,4 +126,10 @@ export class VacancyService {
     }
     return false;
   }
+
+  getEmployerAnnouncements(): Vacancy[] {
+    // тестовый id
+    const employerId = 101;
+    return this.vacanciesData.filter(v => v.employer_id === employerId);
+  }
 }

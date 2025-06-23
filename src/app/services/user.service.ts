@@ -16,7 +16,7 @@ export class UserService {
   }
 
   saveUserRole(role: string): void {
-    localStorage.setItem('UserRole', role)
+    localStorage.setItem('userRole', role)
   }
 
   saveUserName(name: string): void {
