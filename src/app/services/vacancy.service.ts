@@ -12,7 +12,7 @@ export class VacancyService {
     {
       job_id: 1,
       employer_id: 101,
-      title: '1Срочно нужно сделать карточки маркетплейсов для вб',
+      title: '1 Срочно нужно сделать карточки маркетплейсов для вб',
       category: 'Дизайн',
       description: 'Подробное описание вакансии...',
       salary: 500,
@@ -30,7 +30,7 @@ export class VacancyService {
     {
       job_id: 2,
       employer_id: 101,
-      title: '2Срочно нужно сделать карточки маркетплейсов для вб',
+      title: '2 Срочно нужно сделать карточки маркетплейсов для вб',
       category: 'Дизайн',
       description: 'Подробное описание вакансии...',
       salary: 500,
@@ -48,7 +48,7 @@ export class VacancyService {
     {
       job_id: 3,
       employer_id: 101,
-      title: '3Срочно нужно сделать карточки маркетплейсов для вб',
+      title: '3 Срочно нужно сделать карточки маркетплейсов для вб',
       category: 'Дизайн',
       description: 'Подробное описание вакансии...',
       salary: 500,
@@ -66,7 +66,7 @@ export class VacancyService {
     {
       job_id: 4,
       employer_id: 101,
-      title: '4Срочно нужно сделать карточки маркетплейсов для вб',
+      title: '4 Срочно нужно сделать карточки маркетплейсов для вб',
       category: 'Дизайн',
       description: 'Подробное описание вакансии...',
       salary: 500,
