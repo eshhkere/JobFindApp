@@ -1,19 +1,18 @@
 <div class="auth-container">
     <div class="characters-row">
         <div class="character-card" 
-             [class.active]="selectedRole === 'employer'"
-             [class.inactive]="selectedRole === 'finder'"
-             (click)="selectRoleByImage('employer')">
+            [class.active]="selectedRole === 'employer'"
+            [class.inactive]="selectedRole === 'finder'"
+            (click)="selectRoleByImage('employer', $event)">
             <img src="assets/images/employer.png" alt="Работодатель">
             <div class="role-label" *ngIf="selectedRole === 'employer'">
                 Я работодатель
-            </div>
+             </div>
         </div>
-        
         <div class="character-card" 
-             [class.active]="selectedRole === 'finder'"
-             [class.inactive]="selectedRole === 'employer'"
-             (click)="selectRoleByImage('finder')">
+            [class.active]="selectedRole === 'finder'"
+            [class.inactive]="selectedRole === 'employer'"
+            (click)="selectRoleByImage('finder', $event)">
             <img src="assets/images/finder.png" alt="Соискатель">
             <div class="role-label" *ngIf="selectedRole === 'finder'">
                 Я соискатель

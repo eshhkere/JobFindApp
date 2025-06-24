@@ -13,6 +13,7 @@ export class AuthorizationComponent implements OnInit{
   selectedRole: 'finder' | 'employer' | '' = '';
   formSubmitted: boolean = false;
   hoverRole: 'employer' | 'finder' | '' = '';
+  private isProcessing = false;
 
   constructor (
     private telegramService: TelegramService,
@@ -29,8 +30,18 @@ export class AuthorizationComponent implements OnInit{
     }
   }
 
-  selectRoleByImage(role: 'finder' | 'employer'): void {
+  selectRoleByImage(role: 'finder' | 'employer', event?: Event): void {
+    if (this.isProcessing) return;
+    
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    
+    this.isProcessing = true;
     this.selectedRole = role;
+    
+    setTimeout(() => this.isProcessing = false, 100);
   }
 
   onRoleDropdownChange(event: any): void {
