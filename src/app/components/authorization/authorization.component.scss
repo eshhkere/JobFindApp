@@ -29,6 +29,23 @@
   border-radius: 20px;
 }
 
+.clickable-area {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.employer-area {
+  left: 0;
+  width: 80%; 
+}
+
+.finder-area {
+  right: 0;
+  width: 75%; 
+}
 
 // карточки персонажей
 .character-card {
@@ -50,16 +67,6 @@
   
   &:hover {
     z-index: 10 !important;
-  }
-
-  .clickable-area {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 20;
-    cursor: pointer;
   }
   
   // Эллипс-подсветка (тень)

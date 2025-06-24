@@ -7,7 +7,7 @@
             <div class="role-label" *ngIf="selectedRole === 'employer'">
                 Я работодатель
             </div>
-            <div class="clickable-area" (click)="selectRoleByImage('employer', $event)"></div>
+            <div class="clickable-area employer-area" (click)="selectRoleByImage('employer', $event)"></div>
         </div>
         
         <div class="character-card" 
@@ -17,7 +17,7 @@
             <div class="role-label" *ngIf="selectedRole === 'finder'">
                 Я соискатель
             </div>
-            <div class="clickable-area" (click)="selectRoleByImage('finder', $event)"></div>
+            <div class="clickable-area finder-area" (click)="selectRoleByImage('finder', $event)"></div>
         </div>
     </div>
 
