@@ -41,7 +41,12 @@
         </div>
 
         <button type="submit" class="btn-authorize" [disabled]="!isFormValid()">
-            Авторизоваться
+            <span *ngIf="!isLoading">Авторизоваться</span>
+            <span *ngIf="isLoading">Загрузка...</span>
         </button>
+
+        <div class="registration-message" *ngIf="registrationMessage">
+            {{ registrationMessage }}
+        </div>
     </form>
 </div>

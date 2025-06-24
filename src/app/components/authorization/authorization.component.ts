@@ -13,6 +13,9 @@ export class AuthorizationComponent implements OnInit{
   selectedRole: 'finder' | 'employer' | '' = '';
   formSubmitted: boolean = false;
   hoverRole: 'employer' | 'finder' | '' = '';
+  registrationMessage: string = '';
+  isLoading: boolean = false;
+
   private isProcessing = false;
 
   constructor (
@@ -23,6 +26,11 @@ export class AuthorizationComponent implements OnInit{
   
   ngOnInit(): void {
     this.userName = this.telegramService.getUserName();
+    const tgId = this.telegramService.getUserId();
+
+    if (tgId) {
+      this.userService.saveTgId(tgId);
+    }
 
     const savedRole = this.userService.getUserRole();
     if (savedRole === 'finder' || savedRole === 'employer') {
@@ -77,11 +85,27 @@ export class AuthorizationComponent implements OnInit{
       return;
     }
     
-    // пока просто сохраняем в localStorage
+    // сохраняем данные пользователя
     this.userService.saveUserRole(this.selectedRole);
     this.userService.saveUserName(this.userName);
-  
-    this.router.navigate(['/profile']);
+
+    this.isLoading = true;
+
+    this.userService.registerUser().subscribe({
+      next: (response) => {
+        this.registrationMessage = response.message;
+        this.isLoading = false;
+
+        setTimeout(() => {
+          this.router.navigate(['/profile'])
+        }, 1000);
+      },
+      error: (error) => {
+        console.error('Ошибка регистрации:', error);
+        this.registrationMessage = 'Произошла ошибка при регистрации';
+        this.isLoading = false;
+      }
+    });
   }
 
   getRoleName(role: string):string {
