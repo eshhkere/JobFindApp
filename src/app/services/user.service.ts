@@ -11,7 +11,7 @@ export class UserService {
   private readonly USER_NAME_KEY = 'user_name';
   private readonly TG_ID_KEY = 'tg_id';
 
-  private apiUrl = 'http://10.190.66.47:8000'
+  private apiUrl = 'http://192.168.191.65:8000'
 
   constructor(private http: HttpClient) { }
 
