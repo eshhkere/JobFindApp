@@ -30,18 +30,28 @@ export class AuthorizationComponent implements OnInit{
     }
   }
 
-  selectRoleByImage(role: 'finder' | 'employer', event?: Event): void {
+  selectRoleByImage(role: 'finder' | 'employer', event: Event): void {
     if (this.isProcessing) return;
     
-    if (event) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
+    // Полностью останавливаем все события
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    event.stopPropagation();
+    
+    // Добавляем проверку, чтобы не менять уже выбранную роль
+    if (this.selectedRole === role) return;
     
     this.isProcessing = true;
-    this.selectedRole = role;
     
-    setTimeout(() => this.isProcessing = false, 100);
+    // Используем requestAnimationFrame для более плавного обновления UI
+    requestAnimationFrame(() => {
+      this.selectedRole = role;
+      
+      // Используем более длительную задержку
+      setTimeout(() => {
+        this.isProcessing = false;
+      }, 300);
+    });
   }
 
   onRoleDropdownChange(event: any): void {
