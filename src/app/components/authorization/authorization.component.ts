@@ -88,24 +88,77 @@ export class AuthorizationComponent implements OnInit{
     // сохраняем данные пользователя
     this.userService.saveUserRole(this.selectedRole);
     this.userService.saveUserName(this.userName);
-
+  
     this.isLoading = true;
 
-    this.userService.registerUser().subscribe({
-      next: (response) => {
-        this.registrationMessage = response.message;
-        this.isLoading = false;
+    const tgId = this.userService.getTgId() || this.userService.generateRandomId();
 
-        setTimeout(() => {
-          this.router.navigate(['/profile'])
-        }, 1000);
-      },
-      error: (error) => {
-        console.error('Ошибка регистрации:', error);
-        this.registrationMessage = 'Произошла ошибка при регистрации';
-        this.isLoading = false;
-      }
-    });
+    this.userService.saveTgId(tgId);
+
+    // получаем токен с /profile/login
+    const userData = {
+      username: this.userName,
+      role: this.selectedRole,
+      tg: tgId
+    };
+  
+    // this.userService.registerUser().subscribe({
+    //   next: (initResponse) => {
+    //     // После успешной регистрации делаем логин
+    //     this.userService.login(userData).subscribe({
+    //       next: (loginResponse) => {
+    //         if (loginResponse && loginResponse.access_token) {
+    //           this.userService.saveToken(loginResponse.access_token);
+    //           this.registrationMessage = 'Авторизация успешна';
+              
+    //           setTimeout(() => {
+    //             this.router.navigate(['/profile']);
+    //           }, 1000);
+    //         } else {
+    //           this.registrationMessage = 'Ошибка получения токена';
+    //         }
+    //         this.isLoading = false;
+    //       },
+    //       error: (error) => {
+    //         console.error('Ошибка входа:', error);
+    //         this.registrationMessage = 'Произошла ошибка при входе';
+    //         this.isLoading = false;
+    //       }
+    //     });
+    //   },
+    //   error: (error) => {
+    //     console.error('Ошибка инициализации профиля:', error);
+    //     this.registrationMessage = 'Ошибка инициализации профиля';
+    //     this.isLoading = false;
+    //   }
+    // });
+
+    const performLogin = () => {
+      this.userService.login(userData).subscribe({
+        next: (loginResponse) => {
+          if (loginResponse && loginResponse.access_token) {
+            this.userService.saveToken(loginResponse.access_token);
+            this.registrationMessage = 'Авторизация успешна';
+            
+            setTimeout(() => {
+              this.router.navigate(['/profile']);
+            }, 1000);
+          } else {
+            this.registrationMessage = 'Ошибка получения токена';
+          }
+          this.isLoading = false;
+        },
+        error: (error) => {
+          console.error('Ошибка входа:', error);
+          this.registrationMessage = 'Произошла ошибка при входе';
+          this.isLoading = false;
+        }
+      });
+    };
+  
+    // Сначала попробуем выполнить логин напрямую
+    performLogin();
+
   }
 
   getRoleName(role: string):string {
@@ -116,4 +169,16 @@ export class AuthorizationComponent implements OnInit{
     }
     return 'Выберите роль';
   }
+
+  // // временный переход на профиль без авторизации
+  // bypassApiAndNavigate(): void {
+  //   // Сохраняем данные
+  //   this.userService.saveUserRole(this.selectedRole);
+  //   this.userService.saveUserName(this.userName);
+    
+  //   // Переходим на профиль
+  //   this.router.navigate(['/profile']);
+  // }
+
+
 }

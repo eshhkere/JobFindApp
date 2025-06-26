@@ -213,6 +213,11 @@ h2 {
     padding: 10px 20px 10px 20px;
     border: 0;
     margin-top: 20px;
+    cursor: pointer;
+
+    &:hover {
+        background: #4bdda8; 
+    }
 }
 
 
